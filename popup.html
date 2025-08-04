@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zillow Image Copier</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Zillow Image Scraper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="popup.css">
 </head>
-<body class="bg-gray-100">
-    <div class="w-80 p-6">
-        <div class="text-center">
-            <h1 class="text-xl font-bold text-gray-800 mb-2">Zillow Image Copier</h1>
-            <p class="text-sm text-gray-600 mb-6">Click the button to copy the primary image URL.</p>
-            <button id="copyButton" class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 ease-in-out">
-                Copy Image URL
-            </button>
-            <div id="message" class="mt-4 text-sm font-medium"></div>
-        </div>
+<body>
+    <div class="container">
+        <h1>Zillow Image Scraper</h1>
+        <p class="subtitle">Click the button to copy the primary image URL.</p>
+        <button id="copyButton">Copy Image URL</button>
+        <div id="message" class="message"></div>
     </div>
     <script src="popup.js"></script>
 </body>
