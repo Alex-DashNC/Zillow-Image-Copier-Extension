@@ -2,7 +2,7 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "getImageUrl") {
         // Find the main picture element on the page
-        const pictureElement = document.querySelector('.sc-jNJNQp.ftGxJm');
+        const pictureElement = document.querySelector('picture');
         if (pictureElement) {
             // Find all the source elements within the picture element
             const sources = pictureElement.querySelectorAll('source');
