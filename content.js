@@ -2,7 +2,12 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "getImageUrl") {
         // Find the main picture element on the page
-        const pictureElement = document.querySelector('picture');
+        let pictureElement = document.querySelector('picture._exterior');
+        
+        // If no picture with _exterior class exists, try to find any picture element
+        if (!pictureElement) {
+            pictureElement = document.querySelector('picture');
+        }
         if (pictureElement) {
             // Find all the source elements within the picture element
             const sources = pictureElement.querySelectorAll('source');
